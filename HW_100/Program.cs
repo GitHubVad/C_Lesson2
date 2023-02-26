@@ -11,14 +11,22 @@ string tov = "программистов";
 string st = "программист";
 string sta = "программиста";
 int num1 = 0;
+int temp = num / 10;
+int temp1 = temp % 10;
 num1 = num % 10;
+if (temp1 == 1 && num1 == 1)
+  Console.Write($"{num} {tov}");
+else 
 if (num1 == 1)
     Console.Write($"{num}  {st}"); 
     else 
-        if (num1 >= 5) 
+        if (num1 >= 5 && num1 <= 9) 
         Console.Write($"{num} {tov}");
         else 
-            if (num1 >= 2 && num1 <= 4)
-            Console.Write($"{num} {sta}");
-                else Console.Write($"{num} {tov}");
+        if (temp1 == 1) 
+             Console.Write($"{num} {tov}");
+                else 
+                     if (num1 >= 2 && num1 <= 4)
+                    Console.Write($"{num} {sta}");
+                        else Console.Write($"{num} {tov}");
 
